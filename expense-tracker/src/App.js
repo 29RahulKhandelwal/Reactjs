@@ -3,7 +3,7 @@ import expenses from "./components/expenses";
 
 function createExpenseItemCard(expenses){
     return (
-        <ExpenseItem date={expenses.date.toISOString()} title={expenses.title} amount={expenses.amount} />
+        <ExpenseItem date={expenses.date} title={expenses.title} amount={expenses.amount} />
     )
 }
 
