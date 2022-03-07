@@ -11,7 +11,9 @@ function App(){
     return (
         <div>
             <h2>Let's get started</h2>
-            {expenses.map(createExpenseItemCard)}
+            <div className="expenses">
+                {expenses.map(createExpenseItemCard)}
+            </div>
         </div>
     )
 }
