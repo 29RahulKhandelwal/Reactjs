@@ -1,12 +1,22 @@
-import React from "react";
-import Input from "./Input";
+import React, { useState } from "react";
 
 export default function App(){
+  // const [userData,setUserData]=useState()
+
+
   return (
     <div>
-      <Input name="Username " />
-      <Input name="Age (in years) " />
-      <button type="submit">Add User</button>
+      <form>
+        <div>
+          <label htmlFor="Username">Username </label>
+          <input type="text"  id="Username" />
+        </div>
+        <div>
+          <label htmlFor="Age">Age (in years) </label>
+          <input type="text" id="Age" />
+        </div>
+        <button type="submit">Add User</button>
+      </form>
     </div>
   )
 }
