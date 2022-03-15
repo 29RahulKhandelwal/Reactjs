@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function Input(){
+export default function Input(props){
     return (
         <div>
-            <label htmlFor="input">Username</label>
+            <label htmlFor="input">{props.name}</label>
             <input type="text" name="input" id="input" />
         </div>
     )
