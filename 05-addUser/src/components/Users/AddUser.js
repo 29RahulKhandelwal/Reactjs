@@ -26,6 +26,7 @@ export default function AddUser(props){
         if(+user.age > 1){
             
         }
+        props.onAddUser(user);
         setUser({
             username:"",
             age:""
