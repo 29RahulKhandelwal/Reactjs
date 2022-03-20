@@ -20,7 +20,12 @@ export default function AddUser(props){
     }
 
     function addUserHandler(event){
-        console.log(user);
+        if(user.username.trim().length === 0 || user.age.trim().length === 0 ){
+            return alert("enter some data");
+        }
+        if(+user.age > 1){
+            
+        }
         setUser({
             username:"",
             age:""
