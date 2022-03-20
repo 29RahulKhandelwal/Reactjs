@@ -8,7 +8,7 @@ export default function AddUser(props){
         username:"",
         age:""
     });
-
+    
     function handleChange(event){
         const {name,value}=event.target;
         setUser(prevUser=>{
@@ -21,6 +21,10 @@ export default function AddUser(props){
 
     function addUserHandler(event){
         console.log(user);
+        setUser({
+            username:"",
+            age:""
+        });
         event.preventDefault();
     }
 
