@@ -20,8 +20,9 @@ export default function AddUser(props){
             }
         })
     }
-
+    
     function addUserHandler(event){
+        event.preventDefault();
         if(user.username.trim().length === 0 || user.age.trim().length === 0 ){
             setError({
                 title:"Invalid input",
@@ -41,14 +42,17 @@ export default function AddUser(props){
             username:"",
             age:""
         });
-        event.preventDefault();
+    }
+
+    function errorHandler(){
+        setError(null);
     }
 
     return (
         <div>
-            {error && <ErrorModal title={error.title} message={error.message} />}
+            {error && <ErrorModal title={error.title} message={error.message} onConfirm={errorHandler} />}
             <Card className={classes.input}>
-                <form onSubmit={addUserHandler}>
+                <form onSubmit={errorHandler}>
                     <label htmlFor="username">Username</label>
                     <input type="text" id="username" onChange={handleChange} name="username" value={user.username} />
                     <label htmlFor="age">Age (in years)</label>
