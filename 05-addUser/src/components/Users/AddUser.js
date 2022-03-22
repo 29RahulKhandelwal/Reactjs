@@ -8,23 +8,8 @@ import classes from "./AddUser.module.css";
 export default function AddUser(props){
     const nameInputRef=useRef();
     const ageInputRef=useRef();
-    
 
-    // const [user,setUser]=useState({
-    //     username:"",
-    //     age:""
-    // });
     const [error,setError]=useState();
-    
-    // function handleChange(event){
-    //     const {name,value}=event.target;
-    //     setUser(prevUser=>{
-    //         return {
-    //             ...prevUser,
-    //             [name]:value
-    //         }
-    //     })
-    // }
     
     function addUserHandler(event){
         event.preventDefault();
@@ -45,10 +30,6 @@ export default function AddUser(props){
             return;
         }
         props.onAddUser(enteredName,enteredAge);
-        // setUser({
-        //     username:"",
-        //     age:""
-        // });
     }
 
     function errorHandler(){
@@ -64,17 +45,11 @@ export default function AddUser(props){
                     <input 
                     type="text" 
                     id="username"
-                    // onChange={handleChange}
-                    // name="username"
-                    // value={user.username} 
                     ref={nameInputRef} />
                     <label htmlFor="age">Age (in years)</label>
                     <input 
                     type="number" 
                     id="age" 
-                    // onChange={handleChange} 
-                    // name="age" 
-                    // value={user.age} 
                     ref={ageInputRef} />
                     <Button type="submit" onClick={addUserHandler}>Add User</Button>
                 </form>
