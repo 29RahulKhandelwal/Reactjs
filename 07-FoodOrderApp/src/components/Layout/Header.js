@@ -8,7 +8,9 @@ const Header = () => {
             <h1>ReactMeals</h1>
             <button>Cart</button>
         </header>
-        <div></div>
+        <div>
+            
+        </div>
       </Fragment>
   )
 }
