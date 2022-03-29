@@ -1,8 +1,15 @@
 import React from 'react'
+import CartIcon from '../Cart/CartIcon'
 
 const HeaderCartButton = () => {
   return (
-    <div>HeaderCartButton</div>
+    <button>
+        <span>
+            <CartIcon />
+        </span>
+        <span>Your Cart</span>
+        <span>3</span>
+    </button>
   )
 }
 
